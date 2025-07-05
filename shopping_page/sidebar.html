@@ -5,222 +5,182 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>Sidebar</title>
-  <style>
-    body{
-      padding-bottom: 1000px;
-      font-size: 13px;
-    }
-    /* ====== Sidebar container ====== */
-      /* .sidebar {
-      position: fixed;
-      left: 0;
-      background-color: white;
-      width: 72px;
-      font-family: Roboto, Arial;
-      font-size: 10px;
-      z-index: 200;
-    }  */
-    .sidebar {
-      position: fixed;
-      top: 0; left: 0;
-      width: 60px;               /* độ rộng sidebar */
-      height: 100vh;             /* cao bằng chiều cao viewport */
-      
-      background-color: white; /* xanh lá cây */
-      box-shadow: 2px 0 8px rgba(0,0,0,0.1);
-      transition: width 0.3s ease;
-      transform-origin: left;
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+ 
+  <link rel="stylesheet" href="style/Sidebar.css">
+  <link rel="stylesheet" href="style/hamburger..css">
 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-top: 16px;
-      z-index: 200;
-      overflow: hidden;
-    }
-    .sidebar:hover{
-      width: 200px;          /* độ rộng pill bạn muốn */
-    }
-
-    /* show text */
-
-
-    /* ====== Nút menu ====== */
-    .hamburger {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      width: 45px;
-      height: 45px;
-      background-color: #FFD400;
-      border: none;
-      border-radius: 100%;
-      overflow: hidden;
-      /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
-      cursor: pointer; 
-    }
-
-    .icon{
-      position: absolute;
-      left: 21px;
-      top: 28px;
-    }
-
-    .hamburger .bar {
-      display: block;
-      width: 18px;
-      height: 2px;
-      background: #000;
-      margin: 3px 0;
-      border-radius: 1px;
-    }
-
-    .sidebar-link {
-      width: 100%;
-      margin-top: 0px;
-      display: flex;
-      justify-content: center;
-      flex-direction: row;
-      align-items: center;
-    }
-
-    .sidebar:hover .sidebar-link:first-child {
-      border-radius: 24px;   /* bo pill (nửa chiều cao) */
-      background-color: #FFD400;
-    }
-
-    /* ====== Các link/icon khác ====== */
-
-
-  .sidebar-link:hover{
-      background-color: rgb(236, 235, 235);
-  }
-  .sidebar-link img{
-      width: 24px;
-      flex-shrink: 0;
-      margin-right: 12px;         /* icon cách label */
-  }
-
-  .sidebar-link a {
-    display: flex;
-    align-items: center;
-    width: 100%;                
-    height: 50px;
-    padding: 0;
-    color: #333;
-    transition: 0.2s;
-    white-space: nowrap;          
-
-  }
-  /* Icon + khoảng cách */
-  .sidebar-link a img {
-    padding-left: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    margin-right: 12px;
-    flex-shrink: 0;
-  }
-  
-
-  /* Ẩn nhãn & mũi tên khi collapsed */
-  .sidebar-link .label,
-  .sidebar-link .arrow
-  {
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  /* Hiện khi hover sidebar */
-  .sidebar:hover .sidebar-link .label,
-  .sidebar:hover .sidebar-link .arrow
-  {
-    opacity: 1;
-  }
-  /* Mũi tên đẩy sát phải */
-  .sidebar-link .arrow {
-    margin-left: auto;
-    color: #999;
-    font-size: 16px;
-  }
-
-    /* ====== Phần nội dung chính (nếu có) ====== */
-
-  </style>
 </head>
 <body>
-  <!-- Sidebar xanh lá -->
-  <div class="sidebar" style="padding-right: 10px;">
-    <div class="sidebar-link">
-      <div class = "hamburger">
-        <div class = "icon">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+  <div class="sidebar">
+      <div class="sidebar-link">
+        <div class = "hamburger">
+          <div class = "icon">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
         </div>
       </div>
-    </div>
-    
-    <div class="sidebar-link">
+    <div class="sidebar-link has-submenu">
       <a>
         <img src="icon/may_game.png" alt="Máy Game Mới">
         <span class="label">MÁY GAME</span>
         <span class="arrow">›</span>
       </a>
+      <div class="submenu">
+        <a href="#">Máy PS5</a>
+        <a href="#">Máy PS4</a>
+        <a href="#">Máy Nintendo Switch 2</a>
+        <a href="#">Máy PS5</a>
+        <a href="#">Máy PS4</a>
+        <a href="#">Máy Nintendo Switch 2</a>
+        <a href="#">Máy PS5</a>
+        <a href="#">Máy PS4</a>
+        <a href="#">Máy Nintendo Switch 2</a>
+        <a href="#">Máy PS5</a>
+      <!-- …etc… -->
+      </div>
     </div>
-    <div class="sidebar-link">
+    <div class="sidebar-link has-submenu">
       <a>
         <img src="icon/may_game.png" alt="Máy Cũ">
         <span class="label">MÁY CŨ</span>
         <span class="arrow">›</span>
       </a>
+      <div class="submenu">
+        <a href="#">Máy PS5</a>
+        <a href="#">Máy PS4</a>
+        <a href="#">Máy Nintendo</a>
+        <a href="#">Máy Xbox</a>
+        <a href="#">Máy PS3</a>
+        <a href="#">Máy Handheld</a>
+        <a href="#">Máy PSP/PS Vita</a>
+        <a href="#">Nintendo 3DS / 2DS / DS</a>
+        <a href="#">Máy Nintendo Switch 2</a>
+        <a href="#">Iphone</a>
+        <a href="#">Macbook</a>
+        <a href="#">Surface</a>
+      <!-- …etc… -->
+      </div>
     </div>
-    <div class="sidebar-link">
+    <div class="sidebar-link has-submenu">
       <a>
         <img src="icon/phu_kien_game.png" alt="Phụ Kiện Game">
         <span class="label">PHỤ KIỆN GAME</span>
         <span class="arrow">›</span>
       </a>
+        <div class="submenu">
+        <a href="#">PS5</a>
+        <a href="#">Máy PS4</a>
+        <a href="#">Nintendo Switch 2</a>
+        <a href="#">Máy PS5</a>
+        <a href="#">Máy PS4</a>
+        <a href="#">Máy Nintendo Switch 2</a>
+        <a href="#">Máy PS5</a>
+
+      <!-- …etc… -->
+      </div>
     </div>
-    <div class="sidebar-link">
+    <div class="sidebar-link has-submenu">
       <a>
         <img src="icon/apple-2.png" alt="Apple">
         <span class="label">APPLE</span>
         <span class="arrow">›</span>
       </a>
+      <div class="submenu">
+        <a href="#">Máy PS5</a>
+        <a href="#">Máy PS4</a>
+        <a href="#">Máy Nintendo Switch 2</a>
+        <a href="#">Máy PS5</a>
+        <a href="#">Máy PS4</a>
+        <a href="#">Máy Nintendo Switch 2</a>
+        <a href="#">Máy PS5</a>
+
+      <!-- …etc… -->
+      </div>
     </div>
-    <div class="sidebar-link">
+    <div class="sidebar-link has-submenu">
       <a>
         <img src="icon/game-2.png" alt="Digital Cards">
         <span class="label">GAME</span>
         <span class="arrow">›</span>
       </a>
+      <div class="submenu">
+        <a href="#">Máy PS5</a>
+        <a href="#">Máy PS4</a>
+        <a href="#">Máy Nintendo Switch 2</a>
+      <!-- …etc… -->
+      </div>
     </div>
     <!-- ...thêm các mục khác tương tự... -->
-    <div class="sidebar-link">
+    <div class="sidebar-link has-submenu">
       <a>
         <img src="icon/digital_cards.png" alt="Phụ Kiện Game">
         <span class="label">DIGITAL CARDS</span>
         <span class="arrow">›</span>
       </a>
     </div>
-    <div class="sidebar-link">
+    <div class="sidebar-link has-submenu">
       <a>
         <img src="icon/do_choi_qua_tang.png" alt="Apple">
         <span class="label">ĐỒ CHƠI & QUÀ TẶNG</span>
         <span class="arrow">›</span>
       </a>
+      <div class="submenu">
+        <a href="#">Máy PS5</a>
+        <a href="#">Máy PS4</a>
+        <a href="#">Máy Nintendo Switch 2</a>
+        <a href="#">Máy PS5</a>
+      <!-- …etc… -->
+      </div>
     </div>
-    <div class="sidebar-link">
+    <div class="sidebar-link has-submenu">
       <a>
         <img src="icon/surface-1.png" alt="Digital Cards">
         <span class="label">PHU KIEN</span>
         <span class="arrow">›</span>
       </a>
+      <div class="submenu">
+        <a href="#">Máy PS5</a>
+        <a href="#">Máy PS4</a>
+        <a href="#">Máy Nintendo Switch 2</a>
+        <a href="#">Máy PS5</a>
+        <a href="#">Máy PS4</a>
+        <a href="#">Máy Nintendo Switch 2</a>
+        <a href="#">Máy PS5</a>
+      <!-- …etc… -->
+      </div>
     </div>
   </div>
+  <script>
+    document.querySelectorAll('.sidebar-link.has-submenu').forEach(link => {
+      const submenu = link.querySelector('.submenu');
 
+      link.addEventListener('mouseenter', () => {
+        // reset vị trí ban đầu
+        submenu.style.top = '0px';
+        submenu.style.bottom = 'auto';
+
+        // đo bounding box của submenu
+        const rect = submenu.getBoundingClientRect();
+        const viewportH = window.innerHeight;
+
+        if (rect.bottom > viewportH) {
+          // tính khoảng vượt (và cộng thêm 10px đệm)
+          const overshoot = rect.bottom - viewportH + 10;
+          submenu.style.top = `-${overshoot}px`;
+        }
+      });
+
+      link.addEventListener('mouseleave', () => {
+        // trả về giá trị mặc định (để lần hiển thị tiếp theo không giữ offset cũ)
+        submenu.style.top = '';
+      });
+    });
+  </script>
   <!-- Nội dung chính (ví dụ) -->
 </body>
 </html>
