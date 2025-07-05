@@ -1,7 +1,7 @@
 	body{
 		padding-bottom: 1000px;
 		font-size: 13px;
-  		font-family: 'Roboto Flex', Arial, sans-serif;
+  	font-family: 'Roboto Flex', Arial, sans-serif;
 		background-color: burlywood;
 	}
 
@@ -15,35 +15,38 @@
 		background-color: white; /* xanh lá cây */
 		box-shadow: 2px 0 8px rgba(0,0,0,0.1);
 
-		transition: width 0.4s ease;
-		transform-origin: left;
 
 		display: flex;
 		flex-direction: column;
-
+		align-items: center;
 		padding-top: 16px;
 		z-index: 200;
 		overflow: visible;
 
+		transition: width 0.2s ease;
+		transform-origin: left;
 
-
+		position: relative;  /*sidebar in sidebar*/
 	}
 	.sidebar:hover{
 		width: 250px;          /* độ rộng pill bạn muốn */
+	
 	}
+
+
 
 	.sidebar-link {
 		position: relative;
 		width: 100%;
 		margin-top: 0px;
 		display: flex;
+		margin-left: 0px;
 		flex-direction: row;
-
+		align-items: center;
 
 		font-size: 12px;
 		font-weight: 600;
 	}
-
 
 	/* ====== Các link/icon khác ====== */
 
@@ -61,9 +64,7 @@
 	height: 50px;
 	padding: 0;
 	color: #333;
-	white-space: nowrap;    
-	transition: 0.2s;
-      
+	white-space: nowrap;          
 
 }
 /* Icon + khoảng cách */
@@ -80,14 +81,15 @@
 
 /* Ẩn nhãn & mũi tên khi collapsed */
 .arrow{
-	margin-right: 15px;
+	margin-right: 8px;
 }
 .sidebar-link .label,
 .sidebar-link .arrow
 {
 	opacity: 0;
 	margin-top: 18px;
-
+  color: black;              
+  transition: color 0.3s ease;  /* chuyển màu trong 0.3s */
 }
 
 /* Change to yellow when hover */
@@ -113,7 +115,7 @@
 /* Hidden submenu */
 .submenu {
   position: absolute;
-  margin-top: 10px; left: 100%;
+  top: 0; left: 100%;
   max-height: calc(100vh - 20px);  /* không vượt quá viewport */
   background: #fff;
   border-radius: 8px;
@@ -133,7 +135,7 @@
 
 .submenu a {
 	font-size: 11px;
-	font-weight: 600;
+	font-weight: 400;
   display: flex;
   align-items: center;
   height: 40px;            
@@ -152,7 +154,7 @@
 .sidebar-link.has-submenu > .submenu:hover {
   opacity: 1;
   pointer-events: auto;
-  z-index: 1000;   
+  z-index: 1000;   /
 }
 
 
