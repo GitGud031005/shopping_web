@@ -1,11 +1,151 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>404NOTFOUND</title>
         <link rel="stylesheet" href="style/main_page.css">
+        <link rel="stylesheet" href="style/header.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style/sidebar.css">
+
     </head>
     <body>
-        <script type="module">
+        <div class="header">
+            <div class="upper-header">
+                <div class="upper-header-left">
+                    <img class="halo-logo" src="icon/halo-logo-250x46-1.webp">
+                </div>
+                <div class="upper-header-mid">
+                    <input class="search-bar" type="text" placeholder="Search">
+                    <button class="search-button" type="submit">
+                        <img style="width: 65%;" src="icon/search-interface-symbol.png">
+                    </button>
+                </div>
+                <div class="upper-header-right">
+                    <div class="contact">
+                        <img class="icon-phone" src="icon/phone-icon-35x35.webp">
+                        <div class="hotline">
+                            <strong>HOTLINE</strong>
+                            <strong style="color: rgb(255, 231, 0);">028 7306 8666</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lower-header">
+                <div class="lower-header-left">
+                    <div class="prodlist">
+                        <div class="menu">
+                            <span class="ham"></span>
+                            <span class="ham"></span>
+                            <span class="ham"></span>
+                        </div>
+                        <span style="
+                            font-size: 13.5px;
+                            position: absolute;
+                            left: 44px;
+                            top: 12px;
+                        "><strong>DANH MUC SAN PHAM</strong></span>
+                    </div>
+                </div>
+                <div class="lower-header-mid">
+                    <div class="menu-item">
+                        <img src="icon/trang_chu.png">
+                        <strong>TRANG CHU</strong>
+                    </div>
+                    <div class="menu-item">
+                        <img src="icon/san_pham.png">
+                        <strong>SAN PHAM</strong>
+                    </div>
+                    <div class="menu-item">
+                        <img src="icon/images-6-150x150.webp">
+                        <strong>CHUONG TRINH</strong>
+                    </div>
+                    <div class="menu-item">
+                        <img src="icon/cua_hang.png">
+                        <strong>CUA HANG</strong>
+                    </div>
+                    <div class="menu-item">
+                        <img src="icon/ban_tin.png">
+                        <strong>BAN TIN</strong>
+                    </div>
+                </div>
+                <div class="lower-header-right">
+                    <div class="cart-button">
+                        <img style="width: 60%;" src="icon/online-shopping.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar" style="padding-right: 10px;">
+            <div class="sidebar-link">
+              <div class = "hamburger">
+                <div class = "icon">
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                </div>
+              </div>
+            </div>
             
-        </script>
+            <div class="sidebar-link">
+              <a>
+                <img src="icon/may_game.png" alt="Máy Game Mới">
+                <span class="label">MÁY GAME</span>
+                <span class="arrow">›</span>
+              </a>
+            </div>
+            <div class="sidebar-link">
+              <a>
+                <img src="icon/may_game.png" alt="Máy Cũ">
+                <span class="label">MÁY CŨ</span>
+                <span class="arrow">›</span>
+              </a>
+            </div>
+            <div class="sidebar-link">
+              <a>
+                <img src="icon/phu_kien_game.png" alt="Phụ Kiện Game">
+                <span class="label">PHỤ KIỆN GAME</span>
+                <span class="arrow">›</span>
+              </a>
+            </div>
+            <div class="sidebar-link">
+              <a>
+                <img src="icon/apple-2.png" alt="Apple">
+                <span class="label">APPLE</span>
+                <span class="arrow">›</span>
+              </a>
+            </div>
+            <div class="sidebar-link">
+              <a>
+                <img src="icon/game-2.png" alt="Digital Cards">
+                <span class="label">GAME</span>
+                <span class="arrow">›</span>
+              </a>
+            </div>
+            <!-- ...thêm các mục khác tương tự... -->
+            <div class="sidebar-link">
+              <a>
+                <img src="icon/digital_cards.png" alt="Phụ Kiện Game">
+                <span class="label">DIGITAL CARDS</span>
+                <span class="arrow">›</span>
+              </a>
+            </div>
+            <div class="sidebar-link">
+              <a>
+                <img src="icon/do_choi_qua_tang.png" alt="Apple">
+                <span class="label">ĐỒ CHƠI & QUÀ TẶNG</span>
+                <span class="arrow">›</span>
+              </a>
+            </div>
+            <div class="sidebar-link">
+              <a>
+                <img src="icon/surface-1.png" alt="Digital Cards">
+                <span class="label">PHU KIEN</span>
+                <span class="arrow">›</span>
+              </a>
+            </div>
+          </div>
+        <script type="module" src="scripts/header.js"></script>
     </body>
 </html>
