@@ -1,0 +1,107 @@
+/* Wrapper & background */
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.container-buttons {
+  position: fixed;
+  top: 20%;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  align-items: flex-end;
+}
+
+.connect-button {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+.facebook-button {
+  background-color: #3b5998;
+}
+
+.gmail-button {
+  background-color: #af1001;
+}
+
+.tiktok-button {
+  background-color: #69c9d0;
+}
+
+.youtube-button {
+  background-color: #bb1f1f;
+}
+
+.connect-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;  
+  white-space: nowrap;
+  transition:
+    width .3s ease,
+    padding .3s ease;
+}
+
+.connect-button::after {
+  content: attr(data-tooltip);
+  display: none;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.connect-button:hover {
+  width: auto;
+  padding: 0 12px;
+}
+
+.connect-button:hover::after {
+  display: inline-block;
+}
+
+
+.facebook-button {
+  background-color: #3b5998;
+}
+
+.gmail-button {
+  background-color: #af1001;
+}
+
+.tiktok-button {
+  background-color: #69c9d0;
+}
+
+.youtube-button {
+  background-color: #bb1f1f;
+}
+
+.icon-image {
+  width: 24px;
+  height: 24px;
+}

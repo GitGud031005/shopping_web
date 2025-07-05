@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>heloo</title>
+  <style>
+    .squares-container {
+      position: fixed;
+      top: 20%;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      /* căn các ô sao cho mép phải đều dính vào right:20px */
+      align-items: flex-end;
+      gap: 10px;
+      z-index: 2;
+    }
+
+    .square {
+      position: relative;
+      display: inline-block;
+      /* để width:auto có hiệu lực */
+      width: 60px;
+      /* kích thước cố định lúc bình thường */
+      height: 60px;
+      line-height: 60px;
+      /* căn text ở giữa khi nó xuất hiện */
+      background: salmon;
+      color: #fff;
+      text-align: center;
+      white-space: nowrap;
+      /* không cho xuống hàng */
+      overflow: hidden;
+      /* ẩn text tràn trước hover */
+      cursor: pointer;
+      transition:
+        width .3s ease,
+        padding .3s ease;
+    }
+
+    /* nội dung text nằm trong pseudo-element */
+    .square::after {
+      content: attr(data-tooltip);
+      opacity: 0;
+      transition: opacity .2s ease;
+    }
+
+    /* chỉ khi hover ô đó mới bung rộng và show text */
+    .square:hover {
+      width: auto;
+      /* cho ô tự rộng vừa text */
+      padding: 0 10px;
+      /* thêm khoảng trống hai bên */
+    }
+
+    .square:hover::after {
+      opacity: 1;
+      /* hiện text */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="squares-container">
+    <div class="square" data-tooltip="Đây là nội dung ô 1"></div>
+    <div class="square" data-tooltip="Một ô 2 dài hơn"></div>
+    <div class="square" data-tooltip="Ô 3 nội dung"></div>
+    <div class="square" data-tooltip="Ô 4"></div>
+  </div>
+
+
+</body>
+
+</html>
