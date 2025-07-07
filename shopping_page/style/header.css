@@ -15,7 +15,21 @@ body
     left: 60px;
     /* display: grid;
     grid-template-rows: 3.5fr 2fr; */
+    z-index: 200;
 }
+.inner-text {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 160px;
+    margin-left: 60px;
+    padding-left: 20px;
+    width: calc(100% - 80px);
+    padding-right: 50px;
+    z-index: 0;
+    
+}
+
 
 .upper-header
 {
@@ -140,6 +154,8 @@ strong
     display: flex;
     height: 58px;
     flex-direction: row;
+    z-index: 200;
+    background-color: white;
 }
 
 .lower-header-left
@@ -213,9 +229,6 @@ strong
     align-items: center;
     margin: 0;
     padding: 0;
-    /* transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease; */
 }
 
 .menu-item img
