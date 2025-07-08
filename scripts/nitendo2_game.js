@@ -43,6 +43,7 @@ RenderNitendo2Game();
         const frame = productImg.closest('.nitendo2-game-product-img-frame');
 
         if (!frame.querySelector('.nitendo2-game-product-img-frame-order')) {
+          frame.querySelector('.nitendo2-game-product-img').classList.add('invisible');
           const buttonDiv = document.createElement('div');
           buttonDiv.className = 'nitendo2-game-product-img-frame-order';
           buttonDiv.innerHTML = `
@@ -58,28 +59,56 @@ RenderNitendo2Game();
             </div>
           `;
           frame.appendChild(buttonDiv);
+          RenderNitendo2Button();
         }
       });
 
       productImg.addEventListener('mouseleave', () => {
         const frame = productImg.closest('.nitendo2-game-product-img-frame');
+        frame.querySelector('.nitendo2-game-product-img').classList.remove('invisible');
         const existing = frame.querySelector('.nitendo2-game-product-img-frame-order');
         if (existing) existing.remove();
       });
     });
 
-    document.querySelectorAll('.nitendo2-game-product-img-frame-button.search')
-      .forEach(button => {
-        button.addEventListener('mouseenter', () => {
-          const bigDiv = button.closest('.icon-nitendo2');
+  function RenderNitendo2Button() {
+    document.querySelectorAll('.icon-nitendo2').forEach(bigDiv => {
+      const button = bigDiv.querySelector('.nitendo2-game-product-img-frame-button.search');
 
-          if (!bigDiv.querySelector(".noti-shopping")) {
-            const notiDiv = document.createElement('div');
-            notiDiv.className = 'nitendo2-game-noti-shopping';
-            notiDiv.innerHTML = `
-              <p class="noti-shopping">Lựa chọn tuỳ chọn</p>
-            `;
-            bigDiv.prepend(notiDiv);
-          }
-        });
+      if (!button) return;
+
+      bigDiv.addEventListener('mouseenter', () => {
+        if (!bigDiv.querySelector(".nitendo2-game-noti-shopping")) {
+          const notiDiv = document.createElement('div');
+          notiDiv.className = 'nitendo2-game-noti-shopping';
+          notiDiv.innerHTML = `<p class="noti-shopping">Quick view</p>`;
+          bigDiv.prepend(notiDiv);
+        }
       });
+
+      bigDiv.addEventListener('mouseleave', () => {
+        const existing = bigDiv.querySelector('.nitendo2-game-noti-shopping');
+        if (existing) existing.remove();
+      });
+    });
+    document.querySelectorAll('.icon-nitendo2').forEach(bigDiv => {
+      const button = bigDiv.querySelector('.nitendo2-game-product-img-frame-button.shopping');
+
+      if (!button) return;
+
+      bigDiv.addEventListener('mouseenter', () => {
+        if (!bigDiv.querySelector(".nitendo2-game-noti-shopping")) {
+          const notiDiv = document.createElement('div');
+          notiDiv.className = 'nitendo2-game-noti-shopping';
+          notiDiv.innerHTML = `<p class="noti-shopping">Lựa chọn tuỳ chọn</p>`;
+          bigDiv.prepend(notiDiv);
+        }
+      });
+
+      bigDiv.addEventListener('mouseleave', () => {
+        const existing = bigDiv.querySelector('.nitendo2-game-noti-shopping');
+        if (existing) existing.remove();
+      });
+    });
+  }
+  
