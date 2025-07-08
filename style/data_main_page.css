@@ -1,0 +1,222 @@
+.data-main-page{
+  display: grid;
+  grid-template-columns: 1fr 1200px 1fr;
+}
+.data-main-page-blank{
+  background-color: aliceblue;
+}
+.data-main-page-content{
+  background-color: white;
+}
+
+.list-product-name{
+  font-size: 25px;
+  font-weight:300;
+  margin-top: 50px;
+  margin-left: 15px;
+}
+.list-product-icon-list{
+  display: flex;
+  cursor: pointer;
+}
+.list-product-icon{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+.list-product-icon-figure{
+  height: 70px;
+  transition: height 100ms ease;
+}
+.list-product-icon-figure:hover{
+  height: 75px;
+}
+.list-product-icon-description{
+  height: 30px;
+  text-align: center;
+  font-size: 15px;
+  color: rgb(107, 104, 104);
+}
+
+
+.nitendo2{
+  padding: 20px;
+  background-color: aliceblue;
+  margin: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.nitendo2-banner{
+  
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.nitendo2-frame{
+  background-color: white;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-top: 20px;
+  width: 100%;
+}
+.nitendo2-frame-right{
+  grid-column: 2;
+  margin: 0;
+  height: 500px;
+}
+.nitendo2-frame-left{
+  grid-column: 1;
+  margin: 0;
+  margin-left: 30px;
+  margin-right: 5px;
+}
+.nitendo2-frame-left-name{
+  margin-top: 90px;
+  font-size: 60px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.nitendo2-frame-left-discription{
+  font-size: 17px;
+  padding-right: 50px;
+  margin-bottom: 50px;
+}
+.nitendo2-frame-left-list-product{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.nitendo2-frame-left-product{
+  position: relative;
+  background-color: red;
+  height: 150px;
+  margin-right: 20px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.nitendo2-frame-left-product-button{
+  position: absolute;
+  bottom: 22px;
+  left: 25px;
+  height: 40px;
+  width: 90px;
+  background-color: white;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.nitendo2-frame-right-product{
+  height: 400px;
+  margin-right: 60px;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  border: 2px solid red;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nitendo2-frame-right-product-frame{
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+}
+.nitendo2-frame-right-product-figure{
+  flex: 3;
+  background-color: red;
+  transition: background-color 1000ms ease;
+  border-radius: 20px 20px 0 0;
+}
+.nitendo2-frame-right-product-figure:hover{
+  background-color: yellow;
+}
+.nitendo2-frame-right-product-discription{
+  flex: 1;
+  margin: 10px;
+}
+
+
+
+.nitendo2-game{
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
+.nitendo2-game-title{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100% !important;
+  padding-top: 20px;
+}
+.nitendo2-game-title-left{
+  white-space: nowrap;
+  padding: 5px 10px;
+  width: fit-content;
+  font-size: 22px;
+  height: 40px;
+  align-self: flex-start;
+  border-bottom: 2px solid black;
+}
+.nitendo2-game-title-right{
+  flex: 1;
+  font-size: 18px;
+  height: 40px;
+  padding-left: 20px;
+  padding-top: 10px;
+  border-bottom: 2px solid grey;
+  width: 100%;
+}
+.nitendo2-game-product-list{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 20px;
+}
+.nitendo2-game-product-img{
+  width: 50%;
+  padding: 5px;
+  height: 90%;
+}
+.nitendo2-game-product-preorder{
+  padding-top: 5px;
+  width: 40%;
+}
+.nitendo2-game-product{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(211, 205, 205);
+  align-items: center;
+  justify-content: center;
+}
+.nitendo2-game-product-discription{
+  padding: 5px;
+  flex: 1;
+  padding-bottom: 20px;
+}
+.nitendo2-game-product-frame{
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  width: 90%;
+  height: 90%;
+}
+.nitendo2-game-product-img-frame{
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+.nitendo2-game-product-price{
+  font-size: 13px;
+  align-items: end;
+}
