@@ -6,12 +6,12 @@
         <link rel="stylesheet" href="style/header.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
  
         <link rel="stylesheet" href="style/sidebar.css">
         <link rel="stylesheet" href="style/hamburger..css">
-
+        <link rel="stylesheet" href="style/cart.css">
     </head>
     <body>
         <div class="header">
@@ -75,7 +75,7 @@
                 </div>
                 <div class="lower-header-right">
                     <div class="cart-button">
-                        <img style="width: 60%;" src="icon/online-shopping.png">
+                        <img style="width: 50%;" src="icon/online-shopping.png">
                     </div>
                 </div>
             </div>
@@ -217,7 +217,21 @@
             <a href="#">Máy PS5</a>
           </div>
         </div>
-      </div>
+        </div>
+        <div class="curtain"></div>
+        <div class="cart">
+          <div class="cart-header">
+            <span>Cart</span>
+            <div class="close-cart">
+              <img src="icon/close.png">
+              <span>Close</span>
+            </div>
+          </div>
+          <div class="cart-body">
+            <img src="icon/empty-cart.png">
+            <span>Your cart is empty...</span>
+          </div>
+        </div>
         <script type="module" src="scripts/header.js"></script>
         <script>
           document.querySelectorAll('.sidebar-link.has-submenu').forEach(link => {
@@ -241,5 +255,6 @@
             });
           });
         </script>
+        <script type="module" src="scripts/cart.js"></script>
     </body>
 </html>
