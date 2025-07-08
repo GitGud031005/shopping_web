@@ -3,6 +3,8 @@
   width: 100%;
   height: 450px;
   display: flex;
+  /*make the image always take all the width but a fixed height*/
+
 }
 
 .container-buttons {
@@ -69,7 +71,7 @@
   left: 20px;
   cursor: pointer;
   display: flex;
-    align-items: center;
+  align-items: center;
   z-index: 10;
 }
 
@@ -86,25 +88,37 @@
 .danh-muc-san-pham {
   margin-top: 20px;
   background-color: lightcyan;
-  padding: 20px;  
-  margin-top: 200px;
-  margin-left: 200px;
-  margin-right: 200px;
+  padding: 20px;
+  max-height: 400px;
+  /* giới hạn chiều cao */
+  margin-bottom: 100px;
 }
 
+.danh-muc-san-pham-label {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 60px;
+
+}
 
 .list-product {
   display: flex;
-  flex-wrap: nowrap;       /* keep everything on one line */
-  gap: 20px;               /* space between cards */
+  flex-wrap: nowrap;
+  /* keep everything on one line */
+  gap: 20px;
+  /* space between cards */
   padding: 10px;
-  overflow-x: auto;        /* horizontal scroll when too wide */
-   justify-content: space-evenly;/* chia đều khoảng trống xung quanh mỗi item */
-  align-items: center;          /* canh giữa theo chiều dọc */
+  overflow-x: auto;
+  /* horizontal scroll when too wide */
+  justify-content: space-evenly;
+  /* chia đều khoảng trống xung quanh mỗi item */
+  align-items: center;
+  /* canh giữa theo chiều dọc */
 }
 
 .product-item {
-  flex: 0 0 200px;              /* không co giãn, width cố định */
+  flex: 0 0 100px;
+  /* không co giãn, width cố định */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -113,29 +127,46 @@
   background: #f0f0f0;
   border-radius: 10px;
   box-sizing: border-box;
-  height: 200px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  height: 100px;
 }
 
 .product-item:hover {
-  transform: scale(1.05);       /* phóng to khi hover */
-  transition: transform 0.2s;   /* hiệu ứng mượt mà */
+  transform: scale(1.05);
+  /* phóng to khi hover */
+  transition: transform 0.2s;
+  /* hiệu ứng mượt mà */
 }
 
-.product-item{
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 10px;
+.product-item img {
+  width: 30px;
+  /* chiều rộng hình ảnh */
+  height: auto;
+  /* tự động điều chỉnh chiều cao */
+  margin-bottom: 10px;
+  /* khoảng cách dưới hình ảnh */
+}
+
+.product-label {
+  font-size: 12px;
+  /* kích thước chữ nhỏ hơn */
+  color: #555;
+  /* màu chữ xám */
   text-align: center;
-  
+  /* canh giữa chữ */
+  margin-top: 5px;
+  /* khoảng cách trên chữ */
 }
 
-.banner-nw2{
-  margin-top: 50px;
-  margin-left: 200px;
-  margin-right: 200px;
-  width: 80%;
+.banner-nw2 {
   padding: 20px;
   background-color: lightgray;
   border-radius: 10px;
+  width: calc(100% - 80px);
+
+
 }
