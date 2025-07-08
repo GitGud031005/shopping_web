@@ -214,9 +214,63 @@
   flex: 2;
   display: flex;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
+  transition: background-color 1000ms ease
+}
+.nitendo2-game-product-img-frame:hover{
+  background-color: red;
+  z-index: 100;
 }
 .nitendo2-game-product-price{
   font-size: 13px;
   align-items: end;
+}
+.nitendo2-game-product-img-frame{
+  position: relative;
+}
+.nitendo2-game-product-img-frame-order{
+  position: absolute;
+  right: 10px;
+  top: 20px;
+}
+.nitendo2-game-product-img-frame-button-icon{
+  height: 22px;
+  width: 25px;
+}
+
+.nitendo2-game-product-img-frame-button{
+  width: 40px;
+  height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  margin: 0;
+  border: none;
+}
+.search{
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.shopping{
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.nitendo2-game-product-name{
+  font-size: 18px;
+  font-weight: 300;
+}
+.nitendo2-game-product-price{
+  padding-bottom: 10px;
+  font-weight: 500;
+}
+.noti-shopping{
+  font-size: 100px;
+}
+.nitendo2-game-noti-shopping {
+  background-color: #fff;
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  position: absolute;
+  z-index: 1000;
 }
