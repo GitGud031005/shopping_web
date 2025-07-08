@@ -167,11 +167,9 @@ document.addEventListener('DOMContentLoaded',()=>{
   let currentIndex = 0;
 
 	 setInterval(()=>{
-    // Cách 1: gọi lại logic next
     currentIndex = (currentIndex + 1) % slides.length;
     updateSlider();
 
-    // Hoặc Cách 2: giả lập click vào nút Next
     // nextBtn.click();
   }, 5000);
   /* tạo dot */
