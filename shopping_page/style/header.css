@@ -16,6 +16,7 @@ body
     left: 60px;
     /* display: grid;
     grid-template-rows: 3.5fr 2fr; */
+    z-index: 100;
 }
 
 .upper-header
@@ -141,6 +142,7 @@ strong
     display: flex;
     height: 58px;
     flex-direction: row;
+    background-color: white;
 }
 
 .lower-header-left

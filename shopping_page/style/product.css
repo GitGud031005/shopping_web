@@ -1,5 +1,8 @@
-.inner-body
-{
+body {
+    font-family: 'Roboto Flex', Arial, sans-serif;
+}
+
+.inner-body {
     position: relative;
     width: 80%;
     height: 10000px;
@@ -10,45 +13,48 @@
     font-family: Montserrat, Roboto;
 }
 
-.product
-{
+.product {
     display: grid;
-    grid-template-columns: 4fr 4fr;
+    grid-template-columns: 9fr 1fr 9fr;
     width: 100%;
     height: 60vh;
 }
 
-.product-images
-{
+.product-images {
     background-color: aqua;
 }
 
-.purchase
-{
+.purchase {
     /* background-color: coral; */
+    margin-top: 20px;
+
+
 }
 
-.purchase-title
-{
+.purchase-title {
     font-size: 30px;
     font-weight: 500;
 }
+.purchase-description {
+    font-size: 15px;
+    color: #343131;
+    font-weight: 500;
+    margin-top: 10px;
+}
 
-.purchase-category
-{
+.purchase-category {
     /* background-color: lightseagreen; */
     margin-top: 15px;
     margin-bottom: 15px;
 }
 
-.purchase-category-tag
-{
+.purchase-category-tag {
     font-size: 20px;
+    font-weight: bold;
     margin-right: 2px;
 }
 
-.purchase-category-item
-{
+.purchase-category-item {
     font-size: 15px;
     color: #343131;
     font-weight: 500;
@@ -59,32 +65,145 @@
     padding-right: 2px;
     border-radius: 5px;
     margin-left: 2px;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
-.purchase-status
-{
+.purchase-status {
     font-size: 20px;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
-.purchase-version
-{
-    margin-top: 10px;
+.purchase-status span:nth-child(1) {
+    font-weight: bold;
 }
 
-.purchase-version span:first-child
-{
+.purchase-version {
+    font-size: 50px;
+}
+
+.purchase-version span:nth-child(1) {
     font-size: 20px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.purchase-version-region {
+    border: solid;
+    border-color: black;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.purchase-version-region:hover {
+    background-color: black;
+    color: white;
+}
+
+.purchase-price {
+    margin-top: 50px;
+    font-size: 40px;
+    font-weight: 600;
     display: block;
 }
 
-.purchase-version-region
-{
-    display: inline;
+.purchase-option {
+    margin-top: 30px;
 }
 
-.purchase-price
-{
-    font-size: 40px;
-    font-weight: 600;
+.purchase-option-label {
+    font-size: 30px;
+    display: block;
+    font-weight: bold;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: 40px;
+    border-radius: 5px;
+    padding: 0;
+    border: solid 1px #ccc;
+    overflow: hidden;
+}
+
+.btn {
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    padding: 0 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-text {
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 60px;
+    height: 100%;
+    background-color: white;
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+
+.btn:first-child {
+    border-right: 1px solid #ccc;
+}
+
+.btn:last-child {
+    border-left: 1px solid #ccc;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.button.alt {
+    background-color: #FFCE00;
+    color: #000;
+    /* Black text */
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+}
+
+.button.alt:hover {
+    background-color: #E6B800;
+    transform: scale(1.02);
+}
+
+.purchase-controls {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.description-below{
+    
 }
