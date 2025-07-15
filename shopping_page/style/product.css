@@ -248,9 +248,7 @@ input[type="number"] {
 	position: sticky;
 	top: 170px;
 	max-height: 80vh;
-	/* Adjust as needed so it doesn't exceed the viewport height */
 	overflow-y: auto;
-	/* Enable vertical scrolling */
 	width: 100%;
 }
 
