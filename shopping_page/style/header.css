@@ -2,7 +2,7 @@ body
 {
     font-family: Roboto, Arial;
     font-size: 50px;
-    height: 5000px;
+    background-color: lightgray;
 }
 
 .header
@@ -15,6 +15,9 @@ body
     left: 60px;
     /* display: grid;
     grid-template-rows: 3.5fr 2fr; */
+    border: none;
+    z-index: 100;
+
 }
 
 .upper-header
@@ -65,7 +68,6 @@ body
     border: none;
     border-radius: 30px;
     padding-left: 20px;
-    /* padding-bottom: 0; */
     font-size: 15px;
 }
 
@@ -140,6 +142,10 @@ strong
     display: flex;
     height: 58px;
     flex-direction: row;
+    background-color: white;
+    border-bottom: 2px solid lightgray;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 1000;
 }
 
 .lower-header-left
