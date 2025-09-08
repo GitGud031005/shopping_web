@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Danh sách Nintendo Switch</title>
+<style>
+  :root{
+    --gap:20px;
+  }
+  body{
+    background:#f0f0f0;
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+  }
+  .card-wrapper{
+    padding:40px 20px;
+    max-width:1200px;
+    margin:auto;
+  }
+  .card-wrapper h1{
+    font-size:28px;
+    font-weight:700;
+    margin-bottom:24px;
+    color:#111;
+  }
+
+  /* —— CARD ———————————————————————————— */
+  .card-list{
+    display:flex;
+    gap:var(--gap);
+  }
+  .items{
+    background:#fff;
+    border:1px solid #ececec;
+    border-radius:16px;
+    box-shadow:0 2px 8px rgb(0 0 0 / .05);
+    flex:1;
+    padding:16px;
+    box-sizing:border-box;
+    display:flex;
+    flex-direction:column;
+  }
+  .items img{
+    width:100%;
+    height:auto;
+    object-fit:cover;
+    border-radius:8px;
+  }
+  .card-title{
+    font-size:16px;
+    font-weight:500;
+    margin:12px 0 8px;
+    text-align:center;
+    line-height:1.4;
+    color:#333;
+  }
+  .price{
+    font-size:15px;
+    font-weight:700;
+    margin-top:auto;
+    color:#000;
+  }                                /* ← đã đóng ngoặc đúng */
+
+  /* —— SLIDER ——————————————————————————— */
+  .slider{
+    position:relative;
+    overflow:hidden;
+  }
+  .track{
+    display:flex;
+    transition:transform .5s ease;
+    width:100%;
+  }
+  .slide{
+    min-width:100%;
+    box-sizing:border-box;
+    padding:16px;
+  }
+
+  /* —— DOTS —— */
+  .slider-dots{
+    display:flex;
+    justify-content:center;
+    margin-top:16px;
+  }
+  .slider-dots button{
+    width: 5px;height:10px;
+    margin:0 6px;
+    border-radius:50%;
+    border:none;
+    background:#ccc;
+    cursor:pointer;
+  }
+  .slider-dots button.active{background:#333;}
+</style>
+</head>
+<body>
+<div class="card-wrapper">
+  <h1>MÁY NINTENDO SWITCH</h1>
+
+  <div class="slider">
+    <!-- track dịch chuyển -->
+    <div class="track">
+      <!-- slide #1 -->
+      <div class="slide">
+        <div class="card-list">
+          <div class="items">
+            <img src="icon/nintendo-switch-oled-model-mario-red-edition-00-700x700-1.jpg" alt="">
+            <p class="card-title">Nintendo Switch OLED – Mario Red Edition</p>
+            <p class="price">7.200.000 ₫</p>
+          </div>
+          <div class="items">
+            <img src="icon/nintendo-switch-oled-white-joy-con-00-700x700-1.jpg" alt="">
+            <p class="card-title">Nintendo Switch OLED – Pokémon Scarlet & Violet</p>
+            <p class="price">7.650.000 ₫</p>
+          </div>
+          <div class="items">
+            <img src="icon/nintendo_switch_oled_model_with_white_joy-con_animal_crossing_bundle_00-700x700-2.jpg" alt="">
+            <p class="card-title">Nintendo Switch OLED – Splatoon 3 Edition</p>
+            <p class="price">7.650.000 ₫</p>
+          </div>
+          <div class="items">
+            <img src="icon/Nintendo-Switch-OLED-model-with-White-Joy-Con-Anima-5-1.jpg" alt="">
+            <p class="card-title">Nintendo Switch OLED – Zelda TOTK Edition</p>
+            <p class="price">7.650.000 ₫</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- slide #2  (có thể thay nội dung khác) -->
+      <div class="slide">
+        <div class="card-list">
+          <div class="items">
+            <img src="icon/nintendo-switch-oled-model-mario-red-edition-00-700x700-1.jpg" alt="">
+            <p class="card-title">Nintendo Switch OLED – Mario Red Edition</p>
+            <p class="price">7.200.000 ₫</p>
+          </div>
+          <div class="items">
+            <img src="icon/nintendo-switch-oled-white-joy-con-00-700x700-1.jpg" alt="">
+            <p class="card-title">Nintendo Switch OLED – Pokémon Scarlet & Violet</p>
+            <p class="price">7.650.000 ₫</p>
+          </div>
+          <div class="items">
+            <img src="icon/nintendo_switch_oled_model_with_white_joy-con_animal_crossing_bundle_00-700x700-2.jpg" alt="">
+            <p class="card-title">Nintendo Switch OLED – Splatoon 3 Edition</p>
+            <p class="price">7.650.000 ₫</p>
+          </div>
+          <div class="items">
+            <img src="icon/Nintendo-Switch-OLED-model-with-White-Joy-Con-Anima-5-1.jpg" alt="">
+            <p class="card-title">Nintendo Switch OLED – Zelda TOTK Edition</p>
+            <p class="price">7.650.000 ₫</p>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.track -->
+  </div><!-- /.slider -->
+
+  <div class="slider-dots"></div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const track   = document.querySelector('.track');
+  const slides  = Array.from(track.children);
+  const dotsNav = document.querySelector('.slider-dots');
+
+  let currentIndex = 0;
+
+	 setInterval(()=>{
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateSlider();
+
+    // nextBtn.click();
+  }, 5000);
+  /* tạo dot */
+  slides.forEach((_,idx)=>{
+    const btn = document.createElement('button');
+    if(idx===0) btn.classList.add('active');
+    btn.addEventListener('click',()=>{
+      currentIndex = idx;
+      updateSlider();
+    });
+		btn.addEventListener('mouseenter',()=>{
+      currentIndex = idx;
+      updateSlider();
+    });
+    dotsNav.appendChild(btn);
+  });
+  const dots = Array.from(dotsNav.children);
+
+  /* hàm cập nhật */
+  function updateSlider(){
+    track.style.transform = `translateX(-${currentIndex*100}%)`;
+    dots.forEach((d,i)=>d.classList.toggle('active',i===currentIndex));
+  }
+});
+</script>
+</body>
+</html>
