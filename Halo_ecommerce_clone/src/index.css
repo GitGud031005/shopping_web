@@ -16,7 +16,7 @@
 {
   .content
   {
-    @apply  absolute xl:left-[60px] md:left-0 left-4 right-4 top-45 h-auto
+    @apply  relative xl:left-[60px] md:left-0 left-4 right-4 top-45 h-auto w-[calc(100vw-100px)] mb-60
   }
   strong
   {
@@ -26,5 +26,5 @@
 
 body
 {
-  height:10000px;
+  /* height:10000px; */
 }

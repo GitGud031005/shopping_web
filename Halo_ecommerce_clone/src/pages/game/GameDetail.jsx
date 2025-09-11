@@ -1,7 +1,7 @@
 const GameDetail = () => {
     return (
-        <div className="h-500 mt-20 flex gap-20">
-            <div className="flex-3 bg-test1 ml-10">
+        <div className="h-auto mt-20 flex gap-16 mb-16">
+            <div className="flex-3 ml-10">
                 <span className="text-2xl font-medium block mb-6">
                     Giới thiệu về Game Hollow Knight – Nintendo Switch
                 </span>
@@ -45,9 +45,42 @@ const GameDetail = () => {
                 <span className="text-2xl font-medium block mb-6">
                     HƯỚNG DẪN CHƠI GAME
                 </span>
+                <div className="w-full">
+                    <iframe className="aspect-video" src="https://www.youtube.com/embed/G1atkq4C1KU?si=2f9vrQYD4TH_Irry" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                </div>
             </div>
-            <div className="flex-2 bg-test2">
-
+            <div className="flex-2 ">
+                <div className="w-full border-gray-200 border-1 rounded-2xl py-4 text-3xl font-bold pl-4 mb-4">
+                    Thông tin game
+                </div>
+                <table className="border-collapse w-full">
+                    <tbody>
+                        <tr>
+                            <td className="font-semibold py-4 border border-gray-200 border-t-0 border-l-0 text-left">Thể loại</td>
+                            <td className="pl-4 border border-gray-200 border-t-0 border-r-0">Metroidvania, Souls-like, Platformer, Difficult, Indie,...</td>
+                        </tr>
+                        <tr>
+                            <td className="font-semibold py-4 border border-gray-200 border-l-0">Hệ máy</td>
+                            <td className="pl-4 bg-gray-100 border border-gray-200 border-r-0">PC, PS5, PS4, Xbox, Nintendo Switch</td>
+                        </tr>
+                        <tr>
+                            <td className="font-semibold py-4 border border-gray-200 border-l-0">ESRB</td>
+                            <td className="pl-4 border border-gray-200 border-r-0">10+</td>
+                        </tr>
+                        <tr>
+                            <td className="font-semibold py-4 border border-gray-200 border-l-0">Ngày phát hành</td>
+                            <td className="pl-4 bg-gray-100 border border-gray-200 border-r-0">25 Feb, 2017</td>
+                        </tr>
+                        <tr>
+                            <td className="font-semibold py-4 border border-gray-200 border-l-0">Số người chơi</td>
+                            <td className="pl-4 border border-gray-200 border-r-0">1 người</td>
+                        </tr>
+                        <tr>
+                            <td className="font-semibold py-4 border border-gray-200 border-l-0">Nhà sản xuất</td>
+                            <td className="pl-4 bg-gray-100 border border-gray-200 border-r-0">Team Cherry</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     )
