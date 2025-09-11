@@ -1,0 +1,57 @@
+.container-buttons {
+  position: fixed;
+  top: 40%;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  align-items: flex-end;
+}
+
+.connect-button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform .3s ease, opacity .3s ease;
+}
+
+.facebook-button {
+  background-color: #2d7baf;
+}
+
+.threads-button {
+  background-color: black;
+}
+
+.tiktok-button {
+  background-color: black;
+}
+
+.youtube-button {
+  background-color: #bb1f1f;
+}
+
+.connect-button::after {
+  content: attr(data-tooltip);
+  display: none;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.connect-button:hover {
+  width: auto;
+  padding: 0 12px;
+}
+
+.connect-button:hover::after {
+  display: inline-block;
+}
+
+.icon-image {
+  width: 24px;
+  height: 24px;
+}

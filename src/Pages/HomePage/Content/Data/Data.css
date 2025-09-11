@@ -1,0 +1,10 @@
+.data-main-page{
+  display: grid;
+  grid-template-columns: 1fr 1200px 1fr;
+}
+.data-main-page-blank{
+  background-color: aliceblue;
+}
+.data-main-page-content{
+  background-color: white;
+}
