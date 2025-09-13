@@ -1,0 +1,22 @@
+.swiper-pagination-bullet {
+  background-color: transparent !important;
+  opacity: 0.5 !important;
+  border: 2px solid black;
+  width: 12px;
+  height: 12px;
+  margin: 0 4px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: black !important;
+  opacity: 1  !important;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+}
+.swiper-pagination {
+  bottom: -5px !important;
+}
+.swip{
+  padding-bottom: 25px !important;
+}

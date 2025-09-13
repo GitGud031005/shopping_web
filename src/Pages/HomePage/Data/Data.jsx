@@ -1,12 +1,12 @@
 import { ListProduct } from './ListProduct/ListProduct'
-import { Nitendo2 } from './Nitendo/Nitendo2'
+import { IPhone17 } from './IPhone17/IPhone17'
 export function Data(){
   return (
     <>
     <div className="flex justify-center">
       <div className="max-w-5/6 bg-white">
         <ListProduct />
-        <Nitendo2 />
+        <IPhone17 />
       </div>
     </div>
     </>
