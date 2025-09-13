@@ -1,6 +1,7 @@
 import { ListProduct } from './ListProduct/ListProduct'
 import { IPhone17 } from './IPhone17/IPhone17'
 import { Controller } from './PC_Controller/Controller'
+import { Labubu } from './Labubu/Labubu'
 export function Data(){
   return (
     <>
@@ -9,6 +10,7 @@ export function Data(){
         <ListProduct />
         <IPhone17 />
         <Controller />
+        <Labubu />
       </div>
     </div>
     </>

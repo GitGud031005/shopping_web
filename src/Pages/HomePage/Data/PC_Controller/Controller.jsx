@@ -26,9 +26,9 @@ export function Controller(){
           navigation={true}
           modules={[Navigation, Pagination, Autoplay]}
           breakpoints={{
-            640: { slidesPerView: 1, slidesPerGroup :1 },
+            640: { slidesPerView: 2, slidesPerGroup :2 },
             768: { slidesPerView: 3 , slidesPerGroup :3 },
-            1024: { slidesPerView: 4, slidesPerGroup :5 },
+            1024: { slidesPerView: 5, slidesPerGroup :5 },
           }}
           spaceBetween={20}
           className="flex items-stretch swip"
@@ -36,12 +36,12 @@ export function Controller(){
           <SwiperSlide>
             <div className='flex-1 bg-white rounded-2xl'>
               <div className="relative rounded-xl group overflow-hidden ">
-                <div className='object-center flex justify-center items-center'>
+                <div className=' object-center flex justify-center items-center'>
                   <img className='' src='icon/download (1).jpeg'></img>
                 </div>
                 <div className="absolute top-0 right-0 m-2 opacity-0 w-full h-full invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                   <div className='relative w-full h-full group/icon bg-white flex justify-center items-center'>
-                    <img className='w-[90%] object-center transform transition-transform duration-1000 group-hover:scale-105 group-hover:-translate-y-1' src='icon/download.jpeg'></img>
+                    <img className='w-[90%] transform transition-transform duration-1000 group-hover:scale-105 group-hover:-translate-y-1' src='icon/download.jpeg'></img>
                   </div>
                 </div>
                 <div className="absolute top-0 right-0 m-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
