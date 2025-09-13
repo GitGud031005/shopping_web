@@ -4,16 +4,26 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+// Array dữ liệu labubu nằm ngoài component
+const labubuData = [
+  { id: 1, name: "THE MONSTER", image: "icon/download (2).jpeg" },
+  { id: 2, name: "THE MONSTER", image: "icon/download (2).jpeg" },
+  { id: 3, name: "THE MONSTER", image: "icon/download (2).jpeg" },
+  { id: 4, name: "THE MONSTER", image: "icon/download (2).jpeg" },
+  { id: 5, name: "THE MONSTER", image: "icon/download (2).jpeg" },
+];
 
-export function Labubu(){
-  return(
-    <>
-      <div className='bg-gray-100 m-2 mt-5'>
-        <div  className='m-2 w-full overflow-hidden justify-center' >
-          <img src="icon/labubu.webp" className='rounded-[1rem] m-4 w-24/25 justify-center' />
-        </div>
-        <div className='m-5'> 
-          <Swiper
+export function Labubu() {
+  return (
+    <div className="bg-gray-100 m-2 mt-5">
+      <div className="m-2 overflow-hidden justify-center">
+        <img
+          src="icon/labubu.webp"
+          className="rounded-[1rem] m-4 w-24/25 justify-center"
+        />
+      </div>
+      <div className="m-5">
+        <Swiper
           loop={false}
           autoplay={{
             delay: 3000,
@@ -23,88 +33,31 @@ export function Labubu(){
           navigation={true}
           modules={[Navigation, Pagination, Autoplay]}
           breakpoints={{
-            640: { slidesPerView: 2, slidesPerGroup :2 },
-            768: { slidesPerView: 3 , slidesPerGroup :3 },
-            1024: { slidesPerView: 5, slidesPerGroup :5 },
+            640: { slidesPerView: 2, slidesPerGroup: 2 },
+            768: { slidesPerView: 3, slidesPerGroup: 3 },
+            1024: { slidesPerView: 5, slidesPerGroup: 5 },
           }}
           spaceBetween={20}
           className="flex items-stretch swip"
         >
-          <SwiperSlide>
-            <div className='flex-1 bg-white rounded-2xl'>
-              <div className="relative group overflow-hidden ">
-                <div className='object-center flex justify-center items-center'>
-                  <img className='w-full' src='icon/download (2).jpeg'></img>
+          {labubuData.map((labubu) => (
+            <SwiperSlide key={labubu.id}>
+              <div className="flex-1 bg-white rounded-2xl">
+                <div className="relative group overflow-hidden">
+                  <div className="object-center flex justify-center items-center">
+                    <img className="w-full" src={labubu.image} alt={labubu.name} />
+                  </div>
+                </div>
+                <div className="p-3">
+                  <h1 className="text-xl font-semibold m-1 text-center">
+                    {labubu.name}
+                  </h1>
                 </div>
               </div>
-              <div className=' p-3'>
-                <h1 className='text-xl font-semibold m-1 text-center'>
-                  THE MONSTER
-                </h1>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className='flex-1 bg-white rounded-2xl'>
-              <div className="relative group overflow-hidden ">
-                <div className='object-center flex justify-center items-center'>
-                  <img className='w-full' src='icon/download (2).jpeg'></img>
-                </div>
-              </div>
-              <div className=' p-3'>
-                <h1 className='text-xl font-semibold m-1 text-center'>
-                  THE MONSTER
-                </h1>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className='flex-1 bg-white rounded-2xl'>
-              <div className="relative group overflow-hidden ">
-                <div className='object-center flex justify-center items-center'>
-                  <img className='w-full' src='icon/download (2).jpeg'></img>
-                </div>
-              </div>
-              <div className=' p-3'>
-                <h1 className='text-xl font-semibold m-1 text-center'>
-                  THE MONSTER
-                </h1>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className='flex-1 bg-white rounded-2xl'>
-              <div className="relative group overflow-hidden ">
-                <div className='object-center flex justify-center items-center'>
-                  <img className='w-full' src='icon/download (2).jpeg'></img>
-                </div>
-              </div>
-              <div className=' p-3'>
-                <h1 className='text-xl font-semibold m-1 text-center'>
-                  THE MONSTER
-                </h1>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className='flex-1 bg-white rounded-2xl'>
-              <div className="relative group overflow-hidden ">
-                <div className='object-center flex justify-center items-center'>
-                  <img className='w-full' src='icon/download (2).jpeg'></img>
-                </div>
-              </div>
-              <div className=' p-3'>
-                <h1 className='text-xl font-semibold m-1 text-center'>
-                  THE MONSTER
-                </h1>
-              </div>
-            </div>
-          </SwiperSlide>
-          
+            </SwiperSlide>
+          ))}
         </Swiper>
-        </div>
-      
-			</div>
-    </>
-  )
+      </div>
+    </div>
+  );
 }
