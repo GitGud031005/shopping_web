@@ -54,25 +54,28 @@ export function Controller() {
                     </div>
                   </div>
 
-                  <div className="absolute top-0 right-0 m-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col">
-                    <div className="relative group/icon mb-1">
-                      <button className="p-3 bg-white rounded-t-[4px] shadow relative overflow-hidden">
-                        <img className='w-6' src='icon/online-shopping.png' />
-                      </button>
-                      <span className="absolute mr-2 right-full top-1/2 -translate-y-1/2 whitespace-nowrap bg-black text-white px-2 py-1 rounded opacity-0 invisible group-hover/icon:opacity-100 group-hover/icon:visible transition-all duration-300">
-                        Order
-                      </span>
-                    </div>
+                  <div className="absolute top-0 right-0 m-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                  <div className="relative group/icon">
+                    <button className="p-3 bg-white rounded-t-[4px] shadow relative overflow-hidden">
+                      <img className='w-6' src='public/icon/online-shopping.png'></img>
+                    </button>
 
-                    <div className="relative group/icon">
-                      <button className="p-3 bg-white rounded-b-[4px] shadow relative overflow-hidden">
-                        <img className='w-6' src='icon/search-interface-symbol.png' />
-                      </button>
-                      <span className="absolute mr-2 right-full top-1/2 -translate-y-1/2 whitespace-nowrap bg-black text-white px-2 py-1 rounded opacity-0 invisible group-hover/icon:opacity-100 group-hover/icon:visible transition-all duration-300">
-                        Quick View
-                      </span>
-                    </div>
+                    <span className="absolute mr-2 right-full top-1/2 -translate-y-1/2 whitespace-nowrap bg-black text-white px-2 py-1 rounded opacity-0 invisible group-hover/icon:opacity-100 group-hover/icon:visible transition-all duration-300">
+                      Pre-Order
+                    </span>
+                    
                   </div>
+                  <div className="relative group/icon">
+                    <button className="p-3 bg-white rounded-b-[4px] overflow-hidden shadow relative">
+                      <img className='w-6' src='public/icon/search-interface-symbol.png'></img>
+                    </button>
+
+                    <span className="absolute mr-2 right-full top-1/2 -translate-y-1/2 whitespace-nowrap bg-black text-white px-2 py-1 rounded opacity-0 invisible group-hover/icon:opacity-100 group-hover/icon:visible transition-all duration-300">
+                      Quick View
+                    </span>
+                    
+                  </div>
+                </div>
                 </div>
 
                 <div className='mt-6 p-3'>

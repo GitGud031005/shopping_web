@@ -61,6 +61,28 @@ export function IPhone17() {
                       <img className='w-full object-center transform transition-transform duration-1000 group-hover:scale-110 group-hover:-translate-y-1' src={item.hoverImage} />
                     </div>
                   </div>
+                    <div className="absolute top-0 right-0 m-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                    <div className="relative group/icon">
+                      <button className="p-3 bg-white rounded-t-[4px] shadow relative overflow-hidden">
+                        <img className='w-6' src='icon/online-shopping.png'></img>
+                      </button>
+
+                      <span className="absolute mr-2 right-full top-1/2 -translate-y-1/2 whitespace-nowrap bg-black text-white px-2 py-1 rounded opacity-0 invisible group-hover/icon:opacity-100 group-hover/icon:visible transition-all duration-300">
+                        Pre-Order
+                      </span>
+                      
+                    </div>
+                    <div className="relative group/icon">
+                      <button className="p-3 bg-white rounded-b-[4px] overflow-hidden shadow relative">
+                        <img className='w-6' src='icon/search-interface-symbol.png'></img>
+                      </button>
+
+                      <span className="absolute mr-2 right-full top-1/2 -translate-y-1/2 whitespace-nowrap bg-black text-white px-2 py-1 rounded opacity-0 invisible group-hover/icon:opacity-100 group-hover/icon:visible transition-all duration-300">
+                        Quick View
+                      </span>
+                      
+                    </div>
+                  </div>
                 </div>
                 <div className='mt-6 p-3'>
                   <h1 className='text-xl m-1'>{item.name}</h1>
