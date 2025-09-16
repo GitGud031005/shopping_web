@@ -50,7 +50,7 @@ export function Controller() {
 
                   <div className="absolute top-0 right-0 m-2 opacity-0 w-full h-full invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                     <div className='relative w-full h-full group/icon bg-white flex justify-center items-center'>
-                      <img className='w-[90%] transform transition-transform duration-1000 group-hover:scale-105 group-hover:-translate-y-1' src={controllers.hoverImage} alt={controllers.name} />
+                      <img className='h-[90%] transform transition-transform duration-1000 group-hover:scale-105 group-hover:-translate-y-1' src={controllers.hoverImage} alt={controllers.name} />
                     </div>
                   </div>
 
